@@ -27,3 +27,13 @@ INSERT INTO logins (user_id, login_time) VALUES
 (5, NOW() - INTERVAL '6 days'),
 (1, '2025-03-04 07:50:00'),
 (3, '2025-03-09 20:20:00');
+
+
+SELECT * FROM logins
+WHERE login_time >= CURRENT_DATE - INTERVAL '7 days'
+
+SELECT * FROM logins
+WHERE login_time >= '2025-03-01' AND login_time < '2025-03-11';
+
+SELECT * FROM logins
+WHERE user_id = 2;
