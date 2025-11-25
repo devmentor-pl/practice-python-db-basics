@@ -27,3 +27,16 @@ INSERT INTO logins (user_id, login_time) VALUES
 (5, NOW() - INTERVAL '6 days'),
 (1, '2025-03-04 07:50:00'),
 (3, '2025-03-09 20:20:00');
+
+SELECT id, user_id, CURRENT_DATE - login_time::date AS ile_dni_od_logowania
+FROM logins
+WHERE CURRENT_DATE - login_time::date < 7
+ORDER BY id;
+
+SELECT *
+FROM logins
+WHERE user_id = 2;
+
+SELECT *
+FROM logins
+WHERE login_time::date BETWEEN '2025-03-01' AND '2025-03-10';
