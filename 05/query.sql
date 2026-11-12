@@ -1,0 +1,11 @@
+-- LOGOWANIA W CIĄGU OSTATNICH 7 DNI
+SELECT * FROM logins
+WHERE NOW() - login_time < INTERVAL '7 days';
+
+-- GDZIE USER_ID = 2
+SELECT * FROM logins
+WHERE user_id = 2;
+
+-- MIĘDZY 1 A 10 MARCA
+SELECT * FROM logins
+WHERE login_time BETWEEN '2025-03-01' AND '2025-03-11'

@@ -1,0 +1,14 @@
+-- STRONA 1
+SELECT * FROM posts
+ORDER BY created_at DESC
+LIMIT 5 OFFSET 0;
+
+-- STRONA 2
+SELECT * FROM posts
+ORDER BY created_at DESC
+LIMIT 5 OFFSET 5;
+
+-- STRONA 3
+SELECT * FROM posts
+ORDER BY created_at DESC
+LIMIT 5 OFFSET 10;
